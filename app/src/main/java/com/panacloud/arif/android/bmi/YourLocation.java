@@ -17,6 +17,7 @@ import com.panacloud.arif.android.R;
 
 /**
  * Created by Arif on 10/21/2014.
+ * check  github
  */
 public class YourLocation extends Activity implements com.google.android.gms.location.LocationListener {
     static final LatLng TutorialsPoint = new LatLng(21 , 57);
