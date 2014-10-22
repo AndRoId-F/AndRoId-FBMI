@@ -1,0 +1,47 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".BMIActivity" >
+
+   <!--  <item android:id="@+id/action_settings"
+        android:title="@string/action_settings"
+        android:orderInCategory="100"
+        android:icon="@drawable/location_32x32"
+        android:showAsAction="never" /> -->
+
+
+    <item
+        android:id="@+id/save"
+        android:title="Save"
+        android:icon="@drawable/save_32x32"
+        android:showAsAction="always"
+        android:orderInCategory="4"
+       />
+
+    <item
+        android:id="@+id/history"
+        android:title="History"
+        android:icon="@drawable/history_32x32"
+        android:showAsAction="always"
+        android:orderInCategory="3"
+        />
+
+    <item
+        android:id="@+id/share"
+        android:title="Share"
+        android:icon="@drawable/share_32x32"
+        android:showAsAction="always"
+        android:orderInCategory="2"
+        />
+
+
+
+    <item
+        android:id="@+id/location"
+        android:title="Location"
+        android:icon="@drawable/location_32x32"
+        android:showAsAction="always"
+        android:orderInCategory="1"
+
+        />
+
+</menu>

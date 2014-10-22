@@ -1,0 +1,459 @@
+<!--<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <include
+        android:id="@+id/weightScale"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        layout="@layout/weight_scale"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        />
+
+</RelativeLayout> -->
+
+
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                tools:context=".MainActivity"
+                android:background="@color/venomGreen">
+
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        android:id="@+id/relativeLayout"
+        >
+
+    </RelativeLayout>
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/heightSeekBar"
+        android:layout_above="@+id/relativeLayout"
+        android:layout_centerHorizontal="true"
+        android:progress="50"
+        android:visibility="visible"
+        android:alpha="0"
+        />
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/weightSeekBar"
+        android:progress="50"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible"
+        android:alpha="0"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="35"
+        android:textColor="#FF4444"
+        android:id="@+id/bmiValueTextView"
+        android:textSize="40sp"
+        android:gravity="center_vertical"
+        android:layout_above="@+id/frameLayout2"
+        android:layout_centerHorizontal="true"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:id="@+id/heightScaleLinearLayout"
+        android:layout_below="@+id/scaleValueDisplayFrameLayout"
+        android:layout_alignLeft="@+id/heightSeekBar">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView4"
+            android:background="@drawable/left_arrow"
+            android:focusable="false"
+            android:layout_below="@+id/heightSeekBar"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="37dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="173"
+            android:id="@+id/heightScale1TextView"
+            android:layout_alignTop="@+id/heightSeekBar"
+            android:layout_toRightOf="@+id/heightTextView"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="37dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="174"
+            android:id="@+id/heightScale2TextView"
+            android:layout_marginLeft="19dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="37dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="175"
+            android:id="@+id/heightScale3TextView"
+            android:layout_marginLeft="19dp"
+            android:textColor="@color/red"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="37dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="176"
+            android:id="@+id/heightScale4TextView"
+            android:layout_marginLeft="19dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="37dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="177"
+            android:id="@+id/heightScale5TextView"
+            android:layout_marginLeft="19dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView6"
+            android:background="@drawable/right_arrow"
+            android:focusable="false"
+            android:layout_alignWithParentIfMissing="false"
+            android:layout_alignTop="@+id/imageView2"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/weightScalelinearLayout"
+        android:layout_alignTop="@+id/weightSeekBar"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView5"
+            android:background="@drawable/left_arrow"
+            android:focusable="false"
+            android:layout_below="@+id/heightSeekBar"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:layout_width="37dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="108"
+            android:id="@+id/weightScale1TextView"
+            android:layout_alignTop="@+id/heightSeekBar"
+            android:layout_toRightOf="@+id/heightTextView"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:layout_width="37dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="109"
+            android:id="@+id/weightScale2TextView"
+            android:layout_marginLeft="19sp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:layout_width="37dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="110"
+            android:id="@+id/weightScale3TextView"
+            android:layout_marginLeft="19sp"
+            android:textColor="@color/red"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:layout_width="37dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="111"
+            android:id="@+id/weightScale4TextView"
+            android:layout_marginLeft="19sp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:layout_width="37dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="112"
+            android:id="@+id/weightScale5TextView"
+            android:layout_marginLeft="19sp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView7"
+            android:background="@drawable/right_arrow"
+            android:focusable="false"
+            android:layout_alignWithParentIfMissing="false"
+            android:layout_alignTop="@+id/imageView2"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/heightSeekBar"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="280dp"
+        android:layout_toRightOf="@+id/relativeLayout"
+        android:id="@+id/scaleValueDisplayFrameLayout"
+        android:clickable="false"
+        android:background="@color/yellow">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="110"
+            android:id="@+id/weightTextView"
+            android:textSize="18dp"
+            android:textIsSelectable="false"
+            android:textColor="#ff7378ff"
+            android:layout_gravity="right|center_vertical"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="175"
+            android:id="@+id/heightTextView"
+            android:textSize="18dp"
+            android:textIsSelectable="false"
+            android:textColor="#ff7378ff"
+            android:layout_gravity="left|center_vertical"
+            android:alpha="1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="cm"
+            android:id="@+id/heightUnitTextView"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="45dp"
+            android:textColor="@color/green"
+            android:textSize="15sp"
+            android:textIsSelectable="false"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="kg"
+            android:id="@+id/weightUnitTextView"
+            android:layout_gravity="right|center_vertical"
+            android:textColor="@color/green"
+            android:textSize="15dp"
+            android:layout_marginRight="45dp"/>
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/frameLayout2"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Obese"
+            android:id="@+id/bmiStatusTextView"
+            android:layout_gravity="center_horizontal|bottom"
+            android:textColor="@color/red"
+            android:textSize="20dp"/>
+    </FrameLayout>
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_above="@+id/weightSeekBar"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="12dp"
+        android:id="@+id/frameLayout">
+
+     <!--   <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView2"
+            android:background="@drawable/left_arrow"
+            android:focusable="false"
+            android:layout_below="@+id/heightSeekBar"
+            android:layout_marginLeft="130dp"
+            android:layout_gravity="bottom"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView3"
+            android:background="@drawable/right_arrow"
+            android:focusable="false"
+            android:layout_alignWithParentIfMissing="false"
+            android:layout_alignTop="@+id/imageView2"
+            android:layout_gravity="bottom|right"
+            android:layout_marginRight="130dp"/> -->
+
+
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Height in cm"
+        android:id="@+id/heightDescription"
+        android:textIsSelectable="true"
+        android:layout_below="@+id/scaleValueDisplayFrameLayout"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Weight in kg"
+        android:id="@+id/weightDescription"
+        android:layout_below="@+id/frameLayout"
+        android:layout_alignRight="@+id/textView3"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Calculate your BMI"
+        android:textColor="@color/red"
+        android:id="@+id/bmiDescription"
+        android:textSize="30sp"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentRight="false"
+        android:gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bmiDescription"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="80dp"
+        android:layout_above="@+id/bmiValueTextView"
+
+        android:layout_marginBottom="0dp"
+        android:id="@+id/progressBarLinearLayout"
+
+
+        >
+
+      <!--  <Button
+            android:layout_width="25dp"
+            android:layout_height="match_parent"
+            android:id="@+id/b1"
+            android:enabled="false"
+            android:background="#FFD801"
+            android:layout_marginRight="2dp"
+            android:textColor="#FFFFFF"
+            android:textSize="7dp"
+            android:alpha=".05"
+            android:layout_weight="1"/> -->
+
+        <com.panacloud.arif.android.seekbar.CustomSeekBar
+            android:id="@+id/seekBar0"
+            android:layout_width="fill_parent"
+            android:layout_height="20dp"
+            android:layout_margin="10dp"
+            android:max="40"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:progress="35"
+            android:progressDrawable="@android:color/transparent"
+            android:thumb="@drawable/seek_thumb_normal"
+            android:thumbOffset="12dp" />
+
+
+
+
+
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:id="@+id/bmiImageView"
+        android:layout_below="@+id/bmiDescription"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/obese_32x32"/>
+
+</RelativeLayout>
